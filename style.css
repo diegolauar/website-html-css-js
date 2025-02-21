@@ -285,37 +285,37 @@ header .navbar {
 
 /* Testimonials */
 
- .testimonials-section {
+.testimonials-section {
     padding: 50px 0 100px;
     background: light var(--light-pink-color);
- }
+}
 
- .testimonials-section .slider-wrapper{
+.testimonials-section .slider-wrapper {
     overflow: hidden;
     margin: 0 60px 50px;
- }
+}
 
- .testimonials-section .testimonial {
+.testimonials-section .testimonial {
     display: flex;
     padding: 35px;
     text-align: center;
     flex-direction: column;
     align-items: center;
- }
+}
 
- 
- .testimonials-section .testimonial .user-image {
-     width: 180px;
-     height: 180px;
-     object-fit: cover;
-     margin-bottom: 50px;
-     border-radius: var(--border-radius-circle);
- }
 
- .testimonials-section .testimonial .name {
+.testimonials-section .testimonial .user-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 50px;
+    border-radius: var(--border-radius-circle);
+}
+
+.testimonials-section .testimonial .name {
     margin: 16px;
     font-size: var(--font-size-m);
- }
+}
 
 .testimonials-section .testimonial .feedback {
     line-height: 25px;
@@ -338,7 +338,38 @@ header .navbar {
     color: var(--primary-color);
 }
 
-@media screen and (max-width:1024) {
+.gallery-section {
+    padding: 50px 0 100px;
+}
+
+.gallery-section .gallery-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.gallery-section .gallery-list .gallery-item {
+    overflow: hidden;
+    border-radius: var(--border-radius-s);
+    width: calc(100% / 3 - 32px);
+}
+
+.gallery-section .gallery-item .gallery-image {
+    width: 100%;
+    height: 100%;
+    cursor: zoom-in;
+    transition: 0.3s ease;
+}
+
+.gallery-section .gallery-item:hover .gallery-image {
+    transform: scale(1.3);
+}
+
+.contact-section {
+    background: var(--light-pink-color);
+}
+
+@media screen and (max-width:1024px) {
 
     .menu-section .menu-list {
         gap: 60px;
@@ -460,6 +491,14 @@ header .navbar {
     .menu-section .menu-list .menu-item .menu-image {
         max-width: 200px;
     }
+
+    .gallery-section .gallery-list {
+        gap: 30px;
+    }
+
+    .gallery-section .gallery-list .gallery-item {
+        width: calc(100% /2 -30px);
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -468,9 +507,11 @@ header .navbar {
     }
 
 
-    .menu-section .menu-list .menu-item {
+    .menu-section .menu-list .menu-item,
+    .gallery-section .gallery-list .gallery-item {
         width: 100%;
     }
+
     .testimonials-section .slider-wrapper {
         margin: 0 0 30px;
     }
